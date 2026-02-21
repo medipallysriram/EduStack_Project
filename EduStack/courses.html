@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStack - Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Coursera-like Intro/Banner -->
+    <section class="courses-intro" style="text-align:center; padding: 2rem 0 1rem 0; background: #f5f7fa;">
+      <h1 style="margin-bottom: 0.5rem;">Explore Courses</h1>
+      <p style="max-width: 600px; margin: 0 auto 1.5rem auto; color: #555;">Advance your career or learn something new with our curated selection of free courses. Filter by language or search for a course to get started!</p>
+      <!-- Language Filter Dropdown -->
+      <select id="language-dropdown" style="padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid #ccc; margin-bottom: 1rem;">
+        <option value="all">All Languages</option>
+        <option value="english">English</option>
+        <option value="hindi">Hindi</option>
+        <option value="telugu">Telugu</option>
+      </select>
+      <!-- Search Bar -->
+      <input type="text" id="course-search" placeholder="Search courses..." style="padding: 0.5rem 1rem; width: 250px; border-radius: 20px; border: 1px solid #ccc;">
+    </section>
+    <!-- Courses Section (moved from index.html) -->
+    <section class="courses" id="courses">
+      <div class="paired-courses-grid">
+        <!-- JS Algorithms -->
+        <div class="paired-course" data-lang="english">
+          <div class="card">
+            <img src="dsajs.jpeg" alt="JavaScript Algorithms and Data Structures">
+            <div class="card-content">
+              <h3>JavaScript Algorithms and Data Structures</h3>
+              <span class="course-lang">English</span>
+              <a href="course-js-eng.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="hindi">
+          <div class="card">
+            <img src="dsajs.jpeg" alt="JavaScript Algorithms and Data Structures">
+            <div class="card-content">
+              <h3>JavaScript Algorithms and Data Structures</h3>
+              <span class="course-lang">Hindi</span>
+              <a href="course-js-hindi.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="telugu">
+          <div class="card">
+            <img src="dsajs.jpeg" alt="JavaScript Algorithms and Data Structures">
+            <div class="card-content">
+              <h3>JavaScript Algorithms and Data Structures</h3>
+              <span class="course-lang">Telugu</span>
+              <a href="course-js-telugu.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <!-- Python -->
+        <div class="paired-course" data-lang="english">
+          <div class="card">
+            <img src="python.jpeg" alt="Python">
+            <div class="card-content">
+              <h3>Python</h3>
+              <span class="course-lang">English</span>
+              <a href="course-python-eng.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="hindi">
+          <div class="card">
+            <img src="python.jpeg" alt="Python">
+            <div class="card-content">
+              <h3>Python</h3>
+              <span class="course-lang">Hindi</span>
+              <a href="course-python-hindi.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="telugu">
+          <div class="card">
+            <img src="python.jpeg" alt="Python">
+            <div class="card-content">
+              <h3>Python</h3>
+              <span class="course-lang">Telugu</span>
+              <a href="course-python-telugu.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <!-- Web Design -->
+        <div class="paired-course" data-lang="english">
+          <div class="card">
+            <img src="web.jpeg" alt="Responsive Web Design">
+            <div class="card-content">
+              <h3>Responsive Web Design</h3>
+              <span class="course-lang">English</span>
+              <a href="course-web-eng.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="hindi">
+          <div class="card">
+            <img src="web.jpeg" alt="Responsive Web Design">
+            <div class="card-content">
+              <h3>Responsive Web Design</h3>
+              <span class="course-lang">Hindi</span>
+              <a href="course-web-hindi.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="telugu">
+          <div class="card">
+            <img src="web.jpeg" alt="Responsive Web Design">
+            <div class="card-content">
+              <h3>Responsive Web Design</h3>
+              <span class="course-lang">Telugu</span>
+              <a href="course-web-telugu.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <!-- ML with Python -->
+        <div class="paired-course" data-lang="english">
+          <div class="card">
+            <img src="mlpython.jpeg" alt="Machine Learning with Python">
+            <div class="card-content">
+              <h3>Machine Learning with Python</h3>
+              <span class="course-lang">English</span>
+              <a href="course-mlpython-eng.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="hindi">
+          <div class="card">
+            <img src="mlpython.jpeg" alt="Machine Learning with Python">
+            <div class="card-content">
+              <h3>Machine Learning with Python</h3>
+              <span class="course-lang">Hindi</span>
+              <a href="course-mlpython-hindi.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="paired-course" data-lang="telugu">
+          <div class="card">
+            <img src="mlpython.jpeg" alt="Machine Learning with Python">
+            <div class="card-content">
+              <h3>Machine Learning with Python</h3>
+              <span class="course-lang">Telugu</span>
+              <a href="course-mlpython-telugu.html" class="btn" target="_blank">Open Course</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 1rem;">
+        <a href="cours.html" style="display: inline-block; padding: 0.7rem 1.4rem; background-color: #2d6cdf; color: #fff; font-weight: 600; border-radius: 8px; text-decoration: none; transition: background-color 0.3s;">← Back to Home</a>
+      </div>
+    </section>
+    <!-- Footer Section (copied from index.html for consistency) -->
+    <footer>
+      <div class="footer-content">
+        <h3>EduStack</h3>
+        <p>Empowering learners everywhere. Free courses, certifications, and more!</p>
+        <div class="social">
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+      <div class="copywrite">&copy; 2024 EduStack. All rights reserved.</div>
+    </footer>
+<script>
+// Language Dropdown Filter
+const langDropdown = document.getElementById('language-dropdown');
+const pairedCourses = document.querySelectorAll('.paired-course');
+langDropdown.addEventListener('change', function() {
+  const lang = this.value;
+  pairedCourses.forEach(course => {
+    if (lang === 'all' || course.getAttribute('data-lang') === lang) {
+      course.style.display = '';
+    } else {
+      course.style.display = 'none';
+    }
+  });
+});
+// Search Filter
+const searchInput = document.getElementById('course-search');
+searchInput.addEventListener('input', function() {
+  const search = this.value.toLowerCase();
+  const lang = langDropdown.value;
+  pairedCourses.forEach(course => {
+    const title = course.querySelector('h3').textContent.toLowerCase();
+    const matchesLang = (lang === 'all' || course.getAttribute('data-lang') === lang);
+    if (title.includes(search) && matchesLang) {
+      course.style.display = '';
+    } else {
+      course.style.display = 'none';
+    }
+  });
+});
+</script>
+</body>
+</html> 

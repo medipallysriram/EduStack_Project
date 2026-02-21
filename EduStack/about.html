@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduStack - About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .about-section {
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .about-container {
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about-img {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .about-img img {
+      max-width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-img:hover {
+      transform: translateY(-2px) scale(1.03);
+      border-radius: 15px;
+    }
+
+    .about-content {
+      flex: 1 1 600px;
+    }
+
+    .heading span {
+      color: #2d6cdf;
+      font-weight: 600;
+      font-size: 26px;
+      text-transform: uppercase;
+    }
+
+    .heading h1 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .about-text ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .about-text ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #003366;
+    }
+
+    /* Doubt Section Styles */
+    .doubt-section {
+      background-color: #eaf1fb;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .doubt-container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .doubt-section textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: 1px solid #eaf1fb;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    .doubt-section button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .doubt-section button:hover {
+      background-color: #005fa3;
+    }
+
+    #doubtResponse {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+
+    /* ✅ Back Button Styling */
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.7rem 1.4rem;
+      background-color: #2d6cdf;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #1b4fa0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="about-img">
+        <img src="online.png.jpg" alt="Online Learning Image">
+      </div>
+
+      <div class="about-content">
+        <div class="heading">
+          <span>About Us</span>
+          <h1>EduStack</h1>
+        </div>
+
+        <div class="about-text">
+          <p>
+            EduStack is a free online learning platform built to empower learners from all backgrounds with quality education at zero cost.
+            Whether you're a student, a job seeker, or a lifelong learner, our platform provides access to world-class courses created by experts.
+          </p>
+          <p>
+            Our mission is to break down barriers to education by offering completely free resources, practical lessons, and industry-recognized certifications.
+            Learn at your own pace, from anywhere in the world, and build the skills you need to succeed in the digital era.
+          </p>
+          <ul>
+            <li>🎓 100% Free Online Courses</li>
+            <li>🧑‍🏫 Taught by Experienced Professionals</li>
+            <li>💻 Learn Anytime, on Any Device</li>
+            <li>📄 Certificate of Completion for Every Course</li>
+            <li>🌐 No Hidden Fees, No Subscriptions</li>
+          </ul>
+
+          <!-- ✅ Back to Home Button -->
+          <a href="cours.html" class="back-button">← Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doubt Section -->
+  <section class="doubt-section" id="doubt">
+    <div class="doubt-container">
+      <h2>What You Are Looking For??</h2>
+      <textarea id="doubtInput" placeholder="Type your doubt here..."></textarea>
+      <br />
+      <button onclick="submitDoubt()">Submit</button>
+      <div id="doubtResponse"></div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    function submitDoubt() {
+      const doubt = document.getElementById("doubtInput").value.trim();
+      const responseBox = document.getElementById("doubtResponse");
+
+      if (doubt === "") {
+        responseBox.innerText = "Please enter a doubt.";
+        responseBox.style.color = "red";
+      } else {
+        responseBox.innerText = "Thank you for your question!";
+        responseBox.style.color = "green";
+        document.getElementById("doubtInput").value = "";
+      }
+    }
+  </script>
+
+</body>
+</html>

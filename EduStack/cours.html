@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDUSTACK</title>
+  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: #e8f0ef;
+  }
+  
+  /* Top Banner */
+  header {
+    width: 100%;
+    background-color: #2d6cdf;
+    padding: 15px 25px;
+    position: relative;
+  display: flex;
+    align-items: center;
+  }
+  .header-left{
+    display: flex;
+    align-items: center;
+  }
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap:10px;
+  }
+  .header-logo img {
+    width: 50px;     
+    height: 50px;      
+    object-fit: contain;
+    border-radius: 10px;
+    
+  }
+  .header-logo h1 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    
+  }
+  .header-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header-center h2{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  
+  header h1 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Layout container: sidebar + main */
+  .container {
+    display: flex;
+    min-height: calc(100vh - 50px);
+  }
+  
+  /* Sidebar */
+  aside {
+    width: 210px;
+    background-color: #2d6cdf;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+  }
+  
+  /* Logo */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* space between logo and text */
+    margin-bottom: 20px; /* optional: space below logo */
+  }
+  
+  .logo-img {
+    width: 40px;   /* adjust size as needed */
+    height: 40px;  /* adjust size as needed */
+    object-fit: contain;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo::before {
+    content: "🎓";
+    margin-right: 8px;
+  }
+  
+  /* Menu */
+  nav ul {
+    list-style: none;
+    margin-top: 30px;
+  }
+  
+  nav ul li {
+    margin-bottom: 50px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: opacity 0.3s;
+  }
+  
+  nav ul li a:hover {
+    opacity: 0.7;
+  }
+  
+  /* Social icons */
+  .social a {
+    font-size: 26px;
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .social a:hover {
+    color: #1da1f2; /* Example: Twitter Blue */
+  }
+  
+ 
+  
+  /* Main Content */
+  main {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  /* Text Block */
+  .hero-text {
+    max-width: 550px;
+    animation: zoomIn 1s ease-out;
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .hero-text small {
+    color: #777;
+    font-size: 14px;
+    animation: fadeIn 1s ease-out 0.1s both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero-text h2 {
+    font-size: 50px;
+    color: #222;
+    margin: 15px 0;
+    line-height: 1.3;
+    animation: slideInLeft 1s ease-out 0.2s both;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .hero-text h2 span {
+    color: #2a7b91;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    animation: fadeInUp 1s ease-out 0.4s both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-text button {
+    padding: 10px 20px;
+    background-color: #2d6cdf;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    animation: bounceIn 1s ease-out 0.6s both;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .hero-text button:hover {
+    background-color: #444;
+  }
+  
+  /* Image */
+  .hero-image {
+    max-width: 480px;
+    width: 100%;
+    animation: zoomIn 1.2s ease-out 0.3s both;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    display: block;
+   
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+    aside {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    main {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-text {
+      margin-bottom: 30px;
+    }
+  }
+
+.social {/* Social Media Section */
+  margin-bottom: 20px;
+}
+.social a i {/* Social Media Icons */
+  font-size: 28px;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.bxl-youtube { color: #FF0000; }/* YouTube Icon */
+.bxl-twitter { color: #1DA1F2; }/* Twitter Icon */
+.bxl-linkedin { color:darkblue; }/* LinkedIn Icon */
+.copywrite {/* Copywrite Text */
+  font-size: 13px;
+  color: rgb(15, 14, 14);
+  margin-top: 10px;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <div class="header-logo">
+        <img src="Edu Stack.jpg" alt="EduStack Logo"> 
+        <h1>EDUSTACK</h1>
+      </div>
+    </div>
+    <div class="header-center">
+      <h2>FREE ONLINE LEARNING PLATFORM</h2>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <div>
+        <div class="logo-container">
+          <div class="logo-text">CATEGORIES</div>
+        </div>
+        <nav>
+  <ul>
+    <li><a href="#" >Home</a></li>
+    <li><a href="courses.html" >Courses</a></li>
+    <li><a href="certificate.html" >Certifications</a></li>
+    <li><a href="about.html" >About</a></li>
+    <li><a href="review.html" >Reviews</a></li>
+  </ul>
+</nav>
+
+      </div>
+      <div class="social">
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <p>Created By EduStack<br>All Rights Reserved.</p>
+      </div>
+    </aside>
+
+    <main>
+      <div class="hero-text">
+        <h2>Unlock Your Potential with EduStack for Free </h2>
+        <p>Join thousands of learners and access high-quality courses from top instructors.
+Learn at your own pace, anytime, anywhere — absolutely free. At EduStack, we believe education should be accessible to everyone, which is why all our courses are completely free of charge. Whether you're diving into Python, mastering web development, or exploring data science, you'll get hands-on experience, real-world projects, and expert guidance without spending a rupee. No subscriptions. No hidden fees. Just pure learning. Start today and transform your future with EduStack.</p>
+        <button onclick="window.location.href='courses.html'">Join For Free</button>
+      </div>
+      <div class="hero-image">
+        <img src="freelearn.avif" alt="Education Illustration">
+      </div>
+    </main>
+  </div>
+
+ 
+</body>
+</html>

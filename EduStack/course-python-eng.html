@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python (English)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 0; font-family: 'Segoe UI', 'Roboto', Arial, sans-serif; background: #f3f6fb; color: #263238; }
+    .hero-bg { width: 100vw; height: 100vh; min-height: 500px; background: url('python.jpeg') center center/cover no-repeat; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(30, 41, 59, 0.60); z-index: 1; }
+    .hero-content { position: relative; z-index: 2; display: flex; align-items: center; width: 100%; max-width: 1200px; padding: 0 3vw; }
+    .hero-left { flex: 1 1 500px; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; max-width: 600px; }
+    .hero-headline { font-size: 3rem; font-weight: 800; margin-bottom: 1.2rem; line-height: 1.1; letter-spacing: -2px; color: #fff; }
+    .hero-headline span { color: #ffb300; font-weight: 900; letter-spacing: -1px; }
+    .hero-desc { font-size: 1.25rem; color: #e3e8ee; margin-bottom: 2.2rem; max-width: 500px; font-weight: 400; }
+    .get-started-btn { font-size: 1.18rem; font-weight: 700; padding: 1.1rem 2.8rem; border-radius: 10px; border: none; background: #ffb300; color: #222; cursor: pointer; box-shadow: 0 2px 12px rgba(44,62,80,0.10); transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s; margin-top: 0.5rem; }
+    .get-started-btn:hover { background: #ffa000; color: #fff; transform: translateY(-2px) scale(1.03); box-shadow: 0 4px 18px rgba(44,62,80,0.13); }
+    @media (max-width: 900px) { .hero-content { flex-direction: column; align-items: flex-start; gap: 2.5rem; padding: 0 1rem; } }
+    @media (max-width: 600px) { .hero-headline { font-size: 1.5rem; } .hero-content { padding: 0 0.5rem; } .hero-bg { min-height: 350px; } }
+    .overview {
+      background: linear-gradient(120deg, #f7fafc 60%, #e3f0ff 100%);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .overview .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .overview h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .overview p {
+      font-size: 1.3rem;
+      color: #374151;
+    }
+    .learn {
+      background: linear-gradient(120deg, #f3f6fb 60%, #e0f7fa 100%);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .learn .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .learn h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .learn ul {
+      display: inline-block;
+      text-align: left;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+      padding: 2rem 2.5rem;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #374151;
+    }
+    .modules {
+      background: #fff;
+      border-top: 1px solid #e3e8ee;
+      border-bottom: 1px solid #e3e8ee;
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .modules .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .modules h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .modules-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.2rem;
+      display: block;
+    }
+    .modules-list li {
+      background: #eaf1fb;
+      margin-bottom: 16px;
+      padding: 1.1rem 1.2rem;
+      border-radius: 10px;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+      font-size: 1.13rem;
+      font-weight: 500;
+      width: 100%;
+      text-align: left;
+    }
+    .modules-list li:hover {
+      background: #d2e3fc;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    }
+    .modules-list a {
+      text-decoration: none;
+      color: #1a237e;
+      width: 100%;
+      font-weight: 600;
+      font-size: 1.13rem;
+      display: block;
+    }
+    .modules-list a:hover {
+      text-decoration: underline;
+      color: #1565c0;
+    }
+    .resources {
+      background: linear-gradient(120deg, #f3f6fb 60%, #f7fafc 100%);
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .resources .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .resources h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .resources ul {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      padding-left: 0;
+      justify-content: center;
+    }
+    .resources li {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+      padding: 1rem 1.2rem;
+      font-size: 1.08rem;
+      margin: 0;
+      min-width: 260px;
+      flex: 1 1 260px;
+    }
+    .resources a {
+      color: #1565c0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .resources a:hover {
+      text-decoration: underline;
+    }
+    .reviews {
+      background: linear-gradient(120deg, #f7fafc 60%, #e3e8ee 100%);
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      padding-bottom: 3rem;
+    }
+    .reviews .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .reviews h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .review {
+      margin-bottom: 2.2rem;
+      border-left: 4px solid #1a73e8;
+      padding-left: 1.2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .review:last-child { margin-bottom: 0; }
+    .reviewer { font-weight: bold; color: #3b4a5a; font-size: 1.08rem; }
+    .stars { color: #f5b301; margin-left: 0.5rem; font-size: 1.15rem; }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-headline">Looking to <span>master Python?</span></div>
+        <div class="hero-desc">Start, switch, or advance your career with Python. Get hands-on modules, extra resources, and real-world examples to boost your coding skills.</div>
+        <button class="get-started-btn" onclick="document.getElementById('overview').scrollIntoView({behavior: 'smooth'});">Get Started</button>
+      </div>
+    </div>
+  </div>
+  <header>
+    <h1>Python (English)</h1>
+  </header>
+  <section class="overview" id="overview">
+    <div class="section-content">
+      <h2>Course Overview</h2>
+      <p>This course is designed to help you master Python programming from the ground up. Whether you're a beginner or looking to solidify your skills, you'll learn Python syntax, data structures, algorithms, and practical applications through hands-on modules and real-world examples.</p>
+    </div>
+  </section>
+  <section class="learn">
+    <div class="section-content">
+      <h2>What You'll Learn</h2>
+      <ul>
+        <li>Python syntax and core programming concepts</li>
+        <li>Working with lists, dictionaries, and other data structures</li>
+        <li>Functions, modules, and file operations</li>
+        <li>Algorithmic thinking and problem-solving</li>
+        <li>Object-Oriented Programming in Python</li>
+        <li>Practical coding interview preparation</li>
+      </ul>
+    </div>
+  </section>
+  <section class="modules">
+    <div class="section-content">
+      <h2>Course Modules</h2>
+      <ul class="modules-list">
+        <li><a href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">Python for Beginners – Full Course</a></li>
+        <li><a href="https://www.youtube.com/watch?v=WGJJIrtnfpk" target="_blank">Python Data Structures</a></li>
+        <li><a href="https://www.youtube.com/watch?v=8ext9G7xspg" target="_blank">Python Functions and Modules</a></li>
+        <li><a href="https://www.youtube.com/watch?v=apACNr7DC_s" target="_blank">Object-Oriented Programming in Python</a></li>
+        <li><a href="https://www.youtube.com/watch?v=HGOBQPFzWKo" target="_blank">Python Algorithms and Problem Solving</a></li>
+        <li><a href="https://www.youtube.com/watch?v=1bD1P1Vg_dw" target="_blank">File Handling in Python</a></li>
+        <li><a href="https://www.youtube.com/watch?v=DLn3jOsNRVE" target="_blank">Python Projects and Real-World Examples</a></li>
+        <li><a href="https://www.youtube.com/watch?v=qbLc5a9jdXo" target="_blank">Interview Preparation with Python</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="resources">
+    <div class="section-content">
+      <h2>Extra Resources</h2>
+      <ul>
+        <li><a href="https://docs.python.org/3/" target="_blank">Official Python Documentation</a></li>
+        <li><a href="https://realpython.com/" target="_blank">Real Python Tutorials</a></li>
+        <li><a href="https://www.geeksforgeeks.org/python-programming-language/" target="_blank">GeeksforGeeks Python</a></li>
+        <li><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/" target="_blank">freeCodeCamp Python Certification</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="section-content">
+      <h2>Student Reviews</h2>
+      <div class="review">
+        <span class="reviewer">Alex J.</span> <span class="stars">★★★★★</span>
+        <p>"A very practical and easy-to-follow course. Every topic is explained clearly!"</p>
+      </div>
+      <div class="review">
+        <span class="reviewer">Priya S.</span> <span class="stars">★★★★★</span>
+        <p>"The modules and extra resources are super helpful for interviews."</p>
+      </div>
+      <div class="review">
+        <span class="reviewer">Michael T.</span> <span class="stars">★★★★☆</span>
+        <p>"Great structure and extra resources!"</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html> 

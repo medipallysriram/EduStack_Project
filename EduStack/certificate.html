@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications - EduStack</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #f7f9fb 0%, #eaf1fb 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .certification {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      color: #222;
+    }
+
+    .certification h1 {
+      color: #2d6cdf;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .certification .intro {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .certification-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .certification-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(44, 108, 223, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .certification-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 24px rgba(44, 108, 223, 0.13);
+    }
+
+    .certification-card h3 {
+      color: #2d6cdf;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .certification-card .provider {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .certification-card .description {
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .certification-card .features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .certification-card .features li {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .certification-card .features li:before {
+      content: "✓";
+      color: #2d6cdf;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .certification-card .duration {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .certification-card a {
+      display: inline-block;
+      background: linear-gradient(90deg, #2d6cdf 60%, #4e9cff 100%);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 12px rgba(44, 108, 223, 0.10);
+    }
+
+    .certification-card a:hover {
+      background: linear-gradient(90deg, #1b4fa0 60%, #2d6cdf 100%);
+      transform: scale(1.03);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, #2d6cdf 60%, #4e9cff 100%);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 12px rgba(44, 108, 223, 0.10);
+    }
+
+    .back-button:hover {
+      background: linear-gradient(90deg, #1b4fa0 60%, #2d6cdf 100%);
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      
+      .certification h1 {
+        font-size: 2rem;
+      }
+      
+      .certification-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .certification-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="certification" id="certification">
+    <h1>Free Certifications</h1>
+    <p class="intro">
+      Boost your career with these industry-recognized free certifications. These programs are designed by leading companies and universities to help you develop in-demand skills without any cost.
+    </p>
+    
+    <div class="certification-grid">
+      <div class="certification-card">
+        <h3>Foundational C# with Microsoft</h3>
+        <div class="provider">by freeCodeCamp & Microsoft</div>
+        <p class="description">
+          Master the fundamentals of C# programming language in partnership with Microsoft. This comprehensive course covers everything from basic syntax to object-oriented programming concepts, preparing you for real-world software development.
+        </p>
+        <ul class="features">
+          <li>Learn C# fundamentals and OOP concepts</li>
+          <li>Hands-on projects and coding challenges</li>
+          <li>Microsoft-backed curriculum</li>
+          <li>Free certificate upon completion</li>
+          <li>Perfect for beginners and intermediate developers</li>
+        </ul>
+        <div class="duration">Duration: 300 hours</div>
+        <a href="https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" target="_blank">
+          Start Learning →
+        </a>
+      </div>
+
+      <div class="certification-card">
+        <h3>Fundamentals of Digital Marketing</h3>
+        <div class="provider">by Google Digital Garage</div>
+        <p class="description">
+          Master the essentials of digital marketing with Google's comprehensive course. Learn about SEO, social media marketing, email campaigns, and analytics to help businesses grow their online presence effectively.
+        </p>
+        <ul class="features">
+          <li>26 comprehensive modules</li>
+          <li>Google-certified curriculum</li>
+          <li>Real-world case studies</li>
+          <li>Free certificate from Google</li>
+          <li>Ideal for entrepreneurs and marketers</li>
+        </ul>
+        <div class="duration">Duration: 40 hours</div>
+        <a href="https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing" target="_blank">
+          Start Learning →
+        </a>
+      </div>
+
+      <div class="certification-card">
+        <h3>Introduction to Cybersecurity</h3>
+        <div class="provider">by Cisco Networking Academy</div>
+        <p class="description">
+          Explore the exciting world of cybersecurity with Cisco's expert-led course. Understand threats, vulnerabilities, and defense mechanisms while learning about network security, cryptography, and ethical hacking principles.
+        </p>
+        <ul class="features">
+          <li>Industry-leading cybersecurity curriculum</li>
+          <li>Cisco networking badge</li>
+          <li>Hands-on security labs</li>
+          <li>Career guidance and resources</li>
+          <li>Foundation for cybersecurity careers</li>
+        </ul>
+        <div class="duration">Duration: 30 hours</div>
+        <a href="https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity" target="_blank">
+          Start Learning →
+        </a>
+      </div>
+
+      <div class="certification-card">
+        <h3>CS50: Introduction to Computer Science</h3>
+        <div class="provider">by Harvard University & edX</div>
+        <p class="description">
+          Experience Harvard's world-famous computer science course. Learn programming fundamentals, algorithms, data structures, and problem-solving techniques through engaging lectures and hands-on projects.
+        </p>
+        <ul class="features">
+          <li>Harvard University quality education</li>
+          <li>Multiple programming languages</li>
+          <li>Real-world problem solving</li>
+          <li>Active community support</li>
+          <li>Foundation for advanced CS studies</li>
+        </ul>
+        <div class="duration">Duration: 12 weeks</div>
+        <a href="https://cs50.harvard.edu/x/2025/" target="_blank">
+          Start Learning →
+        </a>
+      </div>
+
+      <div class="certification-card">
+        <h3>Python for Everybody</h3>
+        <div class="provider">by University of Michigan & Coursera</div>
+        <p class="description">
+          Master Python programming from the ground up with this comprehensive specialization. Learn data structures, APIs, databases, and web scraping while building real-world applications.
+        </p>
+        <ul class="features">
+          <li>5-course specialization</li>
+          <li>University of Michigan certificate</li>
+          <li>Data science applications</li>
+          <li>Web development projects</li>
+          <li>Career-ready Python skills</li>
+        </ul>
+        <div class="duration">Duration: 8 months</div>
+        <a href="https://www.coursera.org/specializations/python" target="_blank">
+          Start Learning →
+        </a>
+      </div>
+
+      <div class="certification-card">
+        <h3>Web Development Bootcamp</h3>
+        <div class="provider">by The Odin Project</div>
+        <p class="description">
+          Become a full-stack web developer with this comprehensive, project-based curriculum. Learn HTML, CSS, JavaScript, React, Node.js, and databases while building portfolio-worthy projects.
+        </p>
+        <ul class="features">
+          <li>Full-stack development skills</li>
+          <li>Project-based learning</li>
+          <li>Active community support</li>
+          <li>Portfolio development</li>
+          <li>Job-ready web development skills</li>
+        </ul>
+        <div class="duration">Duration: 6-12 months</div>
+        <a href="https://www.theodinproject.com/" target="_blank">
+          Start Learning →
+        </a>
+      </div>
+    </div>
+
+    <a href="cours.html" class="back-button">← Back to Home</a>
+  </section>
+
+</body>
+</html>

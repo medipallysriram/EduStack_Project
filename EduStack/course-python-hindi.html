@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python (Hindi)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; 
+      padding: 0; 
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif; 
+      background: #f3f6fb; 
+      color: #263238; 
+    }
+    .hero-bg { width: 100vw; height: 100vh; min-height: 500px; background: url('python.jpeg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(30, 41, 59, 0.60); z-index: 1; }
+    .hero-content { position: relative; z-index: 2; display: flex; align-items: center; width: 100%; max-width: 1200px; padding: 0 3vw; }
+    .hero-left { flex: 1 1 500px; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; max-width: 600px; }
+    .hero-headline { font-size: 3rem; font-weight: 800; margin-bottom: 1.2rem; line-height: 1.1; letter-spacing: -2px; color: #fff; }
+    .hero-headline span { color: #ffb300; font-weight: 900; letter-spacing: -1px; }
+    .hero-desc { font-size: 1.25rem; color: #e3e8ee; margin-bottom: 2.2rem; max-width: 500px; font-weight: 400; }
+    .get-started-btn { font-size: 1.18rem; font-weight: 700; padding: 1.1rem 2.8rem; border-radius: 10px; border: none; background: #ffb300; color: #222; cursor: pointer; box-shadow: 0 2px 12px rgba(44,62,80,0.10); transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s; margin-top: 0.5rem; }
+    .get-started-btn:hover { background: #ffa000; color: #fff; transform: translateY(-2px) scale(1.03); box-shadow: 0 4px 18px rgba(44,62,80,0.13); }
+    @media (max-width: 900px) { .hero-content { flex-direction: column; align-items: flex-start; gap: 2.5rem; padding: 0 1rem; } }
+    @media (max-width: 600px) { .hero-headline { font-size: 1.5rem; } .hero-content { padding: 0 0.5rem; } .hero-bg { min-height: 350px; } }
+    section { width: 100vw; max-width: 100vw; padding: 2.5rem 0 2rem 0; box-sizing: border-box; }
+    .overview {
+      background: linear-gradient(120deg, #f7fafc 60%, #e3f0ff 100%);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .overview .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .overview h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .overview p {
+      font-size: 1.3rem;
+      color: #374151;
+    }
+    .learn {
+      background: linear-gradient(120deg, #f3f6fb 60%, #e0f7fa 100%);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .learn .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .learn h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .learn ul {
+      display: inline-block;
+      text-align: left;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+      padding: 2rem 2.5rem;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #374151;
+    }
+    .modules {
+      background: #fff;
+      border-top: 1px solid #e3e8ee;
+      border-bottom: 1px solid #e3e8ee;
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .modules .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .modules h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .modules-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.2rem;
+      display: block;
+    }
+    .modules-list li {
+      background: #eaf1fb;
+      margin-bottom: 16px;
+      padding: 1.1rem 1.2rem;
+      border-radius: 10px;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+      font-size: 1.13rem;
+      font-weight: 500;
+      width: 100%;
+      text-align: left;
+    }
+    .modules-list li:hover {
+      background: #d2e3fc;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    }
+    .modules-list a {
+      text-decoration: none;
+      color: #1a237e;
+      width: 100%;
+      font-weight: 600;
+      font-size: 1.13rem;
+      display: block;
+    }
+    .modules-list a:hover {
+      text-decoration: underline;
+      color: #1565c0;
+    }
+    .resources {
+      background: linear-gradient(120deg, #f3f6fb 60%, #f7fafc 100%);
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .resources .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .resources h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .resources ul {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      padding-left: 0;
+      justify-content: center;
+    }
+    .resources li {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+      padding: 1rem 1.2rem;
+      font-size: 1.08rem;
+      margin: 0;
+      min-width: 260px;
+      flex: 1 1 260px;
+    }
+    .resources a {
+      color: #1565c0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .resources a:hover {
+      text-decoration: underline;
+    }
+    .reviews {
+      background: linear-gradient(120deg, #f7fafc 60%, #e3e8ee 100%);
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      padding-bottom: 3rem;
+    }
+    .reviews .section-content {
+      max-width: 900px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .reviews h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .review {
+      margin-bottom: 2.2rem;
+      border-left: 4px solid #1a73e8;
+      padding-left: 1.2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .review:last-child { margin-bottom: 0; }
+    .reviewer { font-weight: bold; color: #3b4a5a; font-size: 1.08rem; }
+    .stars { color: #f5b301; margin-left: 0.5rem; font-size: 1.15rem; }
+    @media (max-width: 800px) { .section-content { padding: 0 1rem; } }
+    @media (max-width: 600px) {
+      .hero-headline { font-size: 1.5rem; }
+      .hero-content { padding: 0 0.5rem; }
+      .hero-bg { min-height: 350px; }
+      h2 { font-size: 1.2rem; }
+      .modules-list li, .resources li { font-size: 1rem; }
+      section { padding: 2rem 0 1.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-headline">क्या आप <span>Python</span> में माहिर बनना चाहते हैं?</div>
+        <div class="hero-desc">Python के साथ अपने करियर की शुरुआत करें, बदलें या आगे बढ़ाएँ। प्रैक्टिकल मॉड्यूल्स, अतिरिक्त संसाधन और रियल-वर्ल्ड उदाहरणों के साथ अपनी कोडिंग स्किल्स को बेहतर बनाएं।</div>
+        <button class="get-started-btn" onclick="document.getElementById('overview').scrollIntoView({behavior: 'smooth'});">शुरू करें</button>
+      </div>
+    </div>
+  </div>
+  <header>
+    <h1>Python (Hindi)</h1>
+  </header>
+  <section class="overview" id="overview">
+    <div class="section-content">
+      <h2>कोर्स का परिचय</h2>
+      <p>यह कोर्स आपको शुरुआत से लेकर एडवांस तक Python प्रोग्रामिंग सिखाने के लिए डिज़ाइन किया गया है। आप Python सिंटैक्स, डेटा स्ट्रक्चर्स, एल्गोरिदम्स और रियल-वर्ल्ड प्रोजेक्ट्स के साथ प्रैक्टिकल नॉलेज हासिल करेंगे।</p>
+    </div>
+  </section>
+  <section class="learn">
+    <div class="section-content">
+      <h2>आप क्या सीखेंगे</h2>
+      <ul>
+        <li>Python की बेसिक और एडवांस सिंटैक्स</li>
+        <li>लिस्ट, डिक्शनरी और अन्य डेटा स्ट्रक्चर्स</li>
+        <li>फंक्शन्स, मॉड्यूल्स और फाइल ऑपरेशन्स</li>
+        <li>एल्गोरिदमिक सोच और प्रॉब्लम सॉल्विंग</li>
+        <li>Python में ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग</li>
+        <li>इंटरव्यू की तैयारी के लिए प्रैक्टिकल टिप्स</li>
+      </ul>
+    </div>
+  </section>
+  <section class="modules">
+    <div class="section-content">
+      <h2>कोर्स मॉड्यूल्स</h2>
+      <ul class="modules-list">
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA" target="_blank">Python परिचय (CodeWithHarry)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd&index=2" target="_blank">वेरिएबल्स और डेटा टाइप्स</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd&index=3" target="_blank">लिस्ट्स और ट्यूपल्स</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd&index=4" target="_blank">डिक्शनरी और सेट्स</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd&index=5" target="_blank">Python में फंक्शन्स</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd&index=6" target="_blank">ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd&index=7" target="_blank">फाइल हैंडलिंग</a></li>
+        <li><a href="https://www.youtube.com/watch?v=gfDE2a7MKjA&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd&index=8" target="_blank">Python प्रोजेक्ट्स</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="resources">
+    <div class="section-content">
+      <h2>अतिरिक्त संसाधन</h2>
+      <ul>
+        <li><a href="https://docs.python.org/hi/3/" target="_blank">Python Documentation (Hindi)</a></li>
+        <li><a href="https://www.codewithharry.com/tutorial/python/" target="_blank">CodeWithHarry Python Tutorials</a></li>
+        <li><a href="https://www.geeksforgeeks.org/python-programming-language/" target="_blank">GeeksforGeeks Python</a></li>
+        <li><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/" target="_blank">freeCodeCamp Python Certification</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="section-content">
+      <h2>स्टूडेंट रिव्यू</h2>
+      <div class="review">
+        <span class="reviewer">Rohit S.</span> <span class="stars">★★★★★</span>
+        <p>"बहुत ही आसान और प्रैक्टिकल कोर्स। हर टॉपिक को अच्छे से समझाया गया है।"</p>
+      </div>
+      <div class="review">
+        <span class="reviewer">Neha T.</span> <span class="stars">★★★★★</span>
+        <p>"CodeWithHarry की वीडियोज़ और ये मॉड्यूल्स इंटरव्यू के लिए बहुत हेल्पफुल हैं।"</p>
+      </div>
+      <div class="review">
+        <span class="reviewer">Amit K.</span> <span class="stars">★★★★☆</span>
+        <p>"स्ट्रक्चर और एक्स्ट्रा रिसोर्सेज बहुत अच्छे हैं।"</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html> 
