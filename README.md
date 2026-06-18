@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Platform-success?style=for-the-badge&logo=google-chrome"/>
 </a>
 
-<a href="https://github.com/medipallysriram/edustack">
+<a href="https://github.com/medipallysriram/edustack"> 
 <img src="https://img.shields.io/badge/GitHub-Source_Code-black?style=for-the-badge&logo=github"/>
 </a>
 
